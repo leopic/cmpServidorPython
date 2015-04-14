@@ -21,7 +21,7 @@ for _ in range(5):
     fake_db()
 
 
-@app.route('/api/carros')
+@app.route('/api/carros/')
 def lista():
     app.logger.debug('[P] lista')
     return jsonify({'carros': carros})
@@ -36,4 +36,4 @@ def detalle(carro_id):
 
 
 if __name__ == '__main__':
-    app.run(host='127.0.0.1', port=3001, debug=True)
+    app.run(host='0.0.0.0', port=5000, debug=True)
